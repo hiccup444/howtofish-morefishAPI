@@ -81,15 +81,15 @@ long and 11cm thick. A chunky model on a flat template will look out of place.
 
 ## What you cannot use
 
-Bosses and mini bosses are excluded, so Giant Piranha, Bowhead Whale, Blue
+Bosses and mini bosses are excluded for now, so Giant Piranha, Bowhead Whale, Blue
 Shark, Goblin Shark, Tuna, The Old Pike and Mutated Bowhead Whale are not
 available. Creatures flagged out of the journal, such as BingBong, are also
 excluded.
 
-The full list is logged at startup, so if a game update adds creatures they will
+The full list is logged at startup, so if a game update adds creatures they should
 appear there without this page being updated.
 
 ## Next
 
 * [FishDefinition reference](fish-definition.md)
-* [Limits and gotchas](limitations.md)
+* [Limits](limitations.md)
