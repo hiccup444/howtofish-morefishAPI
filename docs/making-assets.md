@@ -22,12 +22,11 @@ with X as length and Z as height, and it arrives correct.
 
 Before exporting:
 
-* Apply all transforms. A prefab carrying a leftover scale of 100 is the second
-  most common sizing mistake after modelling in the wrong units
+* Apply all transforms. A prefab carrying a leftover scale of 100 is common.
 * Set the origin to the centre of the body, since that is the point the game
-  applies physics to. An off centre origin makes the fish spin oddly on the line
-* Unwrap UVs. A mesh with no UVs samples one texel and renders as a flat colour
-* Keep it low poly. The reference fish is 61 vertices and looks at home
+  applies physics to. An off centre origin will make the fish spin oddly on the line
+* Optionally unwrap UVs. A mesh with no UVs samples one texel and renders as a flat colour
+* Keep it low poly, probably.
 
 Export FBX with **Y up, -Z forward**, selected objects only, mesh only.
 
@@ -49,22 +48,17 @@ them, but a prefab that does not need stripping is easier to reason about.
 ## Materials and the shader problem
 
 **Do not ship a custom shader in your bundle.** A shader compiled against a
-different Unity version than the game routinely fails to load and renders
-magenta. The game is on Unity 6000.4, and the reference bundle was built in
-6000.3.17f1 without trouble for meshes and textures, but shaders are the part
-that breaks.
+different Unity version than the game will fail to load and render
+magenta. The game is on Unity 6000.4.
 
 Two safe options:
 
-1. Use a stock **URP Lit** material. This is what the reference fish uses and it
-   renders correctly in game
+1. Use a stock **URP Lit** material.
 2. Supply `Texture` on your `FishDefinition` instead of a material. The API
    copies the game's own material and swaps the texture in, so you inherit
    whatever shader the game is using
 
 ## Inventory and journal previews
-
-Worth knowing, because it caused a confusing bug during development.
 
 The world model and the small previews are rendered by different code. The
 previews reuse a shared UI renderer and swap only the mesh, so a custom fish used
@@ -86,10 +80,7 @@ from one bundle do not load it repeatedly.
 
 ## Templates to start from
 
-A Unity package of starter template prefabs is available, sized to the game's own
-creatures, including two hostile ones. Each is an empty root with a `Visual`
-child at the right dimensions. Drop your mesh in, reset the scale, and you have a
-correctly proportioned fish.
+<soon>
 
 See [Templates](templates.md) for the measurements if you would rather build from
 scratch.
