@@ -1,5 +1,7 @@
 # MoreFishAPI
 
+[Thunderstore](https://thunderstore.io/c/how-to-fish/p/hiccup/MoreFishAPI/)
+
 An API for adding custom fish to How to Fish.
 
 **This mod adds no fish on its own.** It is the library other fish mods build on.
