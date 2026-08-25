@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+*.unitypackage binary
+*.dll binary

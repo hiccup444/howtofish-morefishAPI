@@ -1,0 +1,8 @@
+bin/
+obj/
+dist/
+*.user
+Directory.Build.props.user
+.vs/
+.idea/
+*.suo
